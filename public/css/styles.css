@@ -1,0 +1,30 @@
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.task{
+  border-bottom: 2px solid lightgray;
+}
+
+.taskitem{
+  margin: 30px;
+}
+
+.runbtn{
+  background-color: red;
+  color: white;
+  border-radius: 25%;
+  width: 50px;
+  height: 50px;
+}
+
+.statusbtn{
+  background-color: lightgreen;
+  color: white;
+  width: 300px;
+  height: 70px;
+}
+ 

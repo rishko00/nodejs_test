@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  </head>
+
+  <body>
+  <h1>Tasks:</h1>
+  {{#each tasks}}
+  <form method="POST" action="/{{this.id}}" class="task">
+    <span class="taskitem">
+      <b>ID: </b>{{this.id}}
+    </span>
+    <span class="taskitem">
+      <b> Task name: </b>{{this.name}} 
+    </span>
+    <span class="taskitem">
+      <b> Delay: </b>{{this.delay}}
+    </span>
+    <input class="runbtn" type="submit" value="run">
+  </form>
+  {{/each}}
+ 
+  <form method="GET" action="/">
+    <input class="statusbtn" type="submit" value="Status">
+  </form>  
+
+  <h1>Runtime tasks:</h1>
+  {{#each runtime}}
+  <div class="task">
+    <span class="taskitem">
+      <b>ID: </b>{{this.id}}  
+    </span>
+    <span class="taskitem">
+      <b> Task name: </b>{{this.name}} 
+    </span>
+    <span class="taskitem">
+      <b> Time: </b>{{this.currentTime}}
+    </span>
+  </div>
+  {{/each}}
+  </body>
+</html>
